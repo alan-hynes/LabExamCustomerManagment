@@ -29,7 +29,7 @@ public class Customer {
     @Min(value = 2, message = "Last name must be at least 2 characters")
     private String lastName;
 
-    @Email(regexp = "@atu.ie", message = "Email must be in valid format")
+    @Email(regexp = "^.+@.+$", message = "Email must be in valid format")
     private String email;
 
     @Pattern(regexp = "\\d{10}", message = "Phone number must be 10 digits")
