@@ -14,9 +14,9 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    public Customer AddCustomer(Customer customer) throws IllegalAccessException {
+    public Customer addCustomer(Customer customer) {
         if (!customer.isAdult()) {
-            throw new IllegalAccessException("Customer must be over 18");
+            return IllegalArgumentException("Customer must be over 18");
         }
         return customerRepository.save(customer);
     }
