@@ -22,12 +22,12 @@ public class Customer {
     private Long id;
 
     @NotBlank(message = "First name must not be blank")
-    @Min(value = 2, message "First name must be at least 2 characters")
+    @Min(value = 2, message = "First name must be at least 2 characters")
     private String firstName;
 
     @NotBlank(message = "Last name must not be blank")
     @Min(value = 2, message = "Last name must be at least 2 characters")
-    private String lastName
+    private String lastName;
 
     @Email(regexp = "@atu.ie", message = "Email must be in valid format")
     private String email;
