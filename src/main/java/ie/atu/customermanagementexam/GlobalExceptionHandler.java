@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.HashMap;
 
 @ControllerAdvice
-public class GlabalExceptionHandler {
+public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, string>>handleValidationExceptions(MethodArgumentNotValidException ex) {
